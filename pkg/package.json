@@ -1,0 +1,14 @@
+{
+  "name": "perlin",
+  "description": "Using stuff",
+  "version": "0.1.0",
+  "license": "MIT/Apache-2.0",
+  "files": [
+    "perlin_bg.wasm",
+    "perlin.js",
+    "perlin.d.ts"
+  ],
+  "module": "perlin.js",
+  "types": "perlin.d.ts",
+  "sideEffects": false
+}
