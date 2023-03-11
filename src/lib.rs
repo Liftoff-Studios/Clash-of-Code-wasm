@@ -75,6 +75,6 @@ const noise = (x, y=0, z=0) => {
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn greet(name: &str) {
-    alert(&format!("Hello, {}!", name));
+pub fn greet(name: &str)->String{
+    String::from("Hi")
 }
