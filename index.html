@@ -4,6 +4,12 @@
         <title>WASM</title>
     </head>
     <body>
-        
+    <script type="module">
+        import init, { perlin_noise } from "https://cdn.jsdelivr.net/gh/Liftoff-Studios/Clash-of-Code-wasm@main/pkg/perlin.js";
+        init().then(() => {
+            let test = perlin_noise(1,2,3,400.0,500.0);
+            console.log(test)
+        });
+    </script>
     </body>
 </html>
