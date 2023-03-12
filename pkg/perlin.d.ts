@@ -1,20 +1,21 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
-* @param {string} name
-* @returns {string}
+* @param {number} x
+* @param {number} y
+* @param {number} z
+* @param {number} width
+* @param {number} height
+* @returns {number}
 */
-export function greet(name: string): string;
+export function perlin_noise(x: number, y: number, z: number, width: number, height: number): number;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly greet: (a: number, b: number, c: number) => void;
-  readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
-  readonly __wbindgen_malloc: (a: number) => number;
-  readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
-  readonly __wbindgen_free: (a: number, b: number) => void;
+  readonly perlin_noise: (a: number, b: number, c: number, d: number, e: number) => number;
+  readonly __wbindgen_exn_store: (a: number) => void;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;
