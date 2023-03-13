@@ -80,15 +80,20 @@
 
 
         init().then(() => {
-            console.time("wasm")
-            let test = perlin_noise(1,2,3,400.0,500.0);
-            console.timeEnd("wasm")
+            let t1 = performance.now();
+            for(let i =0; i<1000;i++){
+			perlin_noise(i,i+1,i+2,400.0,500.0);
+		}
+            let t2 = performance.now();
 
-            console.time("JS")
-            let foo = noise(1,2,3);
-            console.timeEnd("JS")
 
-            console.log(test,foo)
+            let t3 = performance.now();
+            for(let i =0; i<1000;i++){
+			noise(i,i+1,i+2);
+		}
+            let t4 = performance.now();
+
+		console.log(t2-t1, t4-t3)
         });
     </script>
     </body>
